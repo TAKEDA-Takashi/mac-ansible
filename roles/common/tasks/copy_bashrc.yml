@@ -1,0 +1,6 @@
+---
+- name: copy setenv files to bashrc.d
+  copy:
+    src: "{{ item }}"
+    dest: ~/.bashrc.d/
+  with_fileglob: bashrc/*

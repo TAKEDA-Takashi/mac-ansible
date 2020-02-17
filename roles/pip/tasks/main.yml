@@ -15,11 +15,7 @@
       state: "{{ item.state }}"
     loop: "{{ packages }}"
 
-  - name: copy setenv files to bashrc.d
-    copy:
-      src: "{{ item }}"
-      dest: ~/.bashrc.d/
-    with_fileglob: bashrc/*
+  - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:
     - pip

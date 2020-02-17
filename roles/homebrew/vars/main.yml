@@ -1,0 +1,16 @@
+---
+packages:
+  - { name: mas, state: present }
+  - { name: bash, state: present }
+  - { name: bash-completion@2, state: present }
+  - { name: jq, state: present }
+  - { name: git, state: present }
+  - { name: hub, state: present }
+  - { name: nvm, state: present }
+  - { name: nkf, state: present }
+  - { name: tree, state: present }
+  - { name: rename, state: present }
+  - { name: htop, state: present }
+  - { name: gnu-sed, state: present }
+  - { name: gawk, state: present }
+  - { name: aurl, state: present } # classmethod/repos

@@ -1,0 +1,17 @@
+---
+- name: mac ansible
+  hosts: localhost
+  connection: local
+  become: no
+  gather_facts: no
+  roles:
+    - bash
+    - homebrew_tap
+    - homebrew
+    - homebrew_cask
+    - pip
+    - awscli
+    - rust
+    - mas
+    - macos
+    - _private

@@ -1,0 +1,31 @@
+---
+- block:
+  - name: check awscli
+    command: "which aws"
+    register: result
+    check_mode: no
+    changed_when: no
+    failed_when: no
+
+  - block:
+    - name: download awscli installer
+      get_url:
+        url: https://awscli.amazonaws.com/AWSCLIV2.pkg
+        dest: /tmp/AWSCLIV2.pkg
+        validate_certs: no
+      register: download
+
+    - name: install awscli
+      become: yes
+      command: "installer -pkg {{ download.dest }} -target /"
+ 
+    when: result.rc == 1
+
+  - name: copy setenv files to bashrc.d
+    copy:
+      src: "{{ item }}"
+      dest: ~/.bashrc.d/
+    with_fileglob: bashrc/*
+
+  tags:
+    - awscli

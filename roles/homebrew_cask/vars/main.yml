@@ -1,0 +1,16 @@
+---
+packages:
+  - { name: 1password, state: present }
+  - { name: coteditor, state: present }
+  - { name: visual-studio-code, state: present }
+  - { name: karabiner-elements, state: present }
+  - { name: jetbrains-toolbox, state: present }
+  - { name: tunnelblick, state: present }
+  - { name: clipy, state: present }
+  - { name: docker, state: present }
+  - { name: iterm2, state: present }
+  - { name: corretto8, state: present } # homebrew/cask-versions
+
+vscode_plugins:
+  - taichi.vscode-textlint
+  - amazonwebservices.aws-toolkit-vscode

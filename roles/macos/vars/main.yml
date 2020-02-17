@@ -1,0 +1,120 @@
+---
+settings:
+  # トラックパッド
+  - # タップでクリック
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    type: int
+    value: 1
+    state: present
+  - # タップでクリック2
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    type: int
+    value: 1
+    state: present
+  - # スマートズーム
+    domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadTwoFingerDoubleTapGesture
+    type: int
+    value: 0
+    state: present
+  - # スマートズーム2
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadTwoFingerDoubleTapGesture
+    type: int
+    value: 0
+    state: present
+  - # 回転
+    domain: com.apple.AppleMultitouchTrackpad
+    key: TrackpadRotate
+    type: int
+    value: 0
+    state: present
+  - # 回転2
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: TrackpadRotate
+    type: int
+    value: 0
+    state: present
+  - # アプリケーションExpose
+    domain: com.apple.dock
+    key: showAppExposeGestureEnabled
+    type: int
+    value: 1
+    state: present
+
+  # キーボード／入力ソース
+  - # 円キー
+    domain: com.apple.inputmethod.Kotoeri
+    key: JIMPrefCharacterForYenKey
+    type: int
+    value: 1
+    state: present
+  - # 全角数字入力
+    domain: com.apple.inputmethod.Kotoeri
+    key: JIMPrefFullWidthNumeralCharactersKey
+    type: int
+    value: 0
+    state: present
+
+  # アクセシビリティ／ポインタコントロール
+  - # トラックパッドドラッグ有効化
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Dragging
+    type: int
+    value: 1
+    state: present
+  - # トラックパッドドラッグ有効化2
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Dragging
+    type: int
+    value: 1
+    state: present
+
+  # メニュー表示
+  - # バッテリー残量設定
+    domain: com.apple.menuextra.battery
+    key: ShowPercent
+    type: string
+    value: YES
+    state: present
+  - # 時刻表示設定
+    domain: com.apple.menuextra.clock
+    key: DateFormat
+    type: string
+    value: "M\\u6708d\\u65e5(EEE)  H:mm:ss"
+    state: present
+
+  # ホットコーナー
+  - # 左下スクリーンセーバー開始
+    domain: com.apple.dock
+    key: wvous-bl-corner
+    type: int
+    value: 5
+    state: present
+  - 
+    domain: com.apple.dock
+    key: wvous-bl-modifier
+    type: int
+    value: 0
+    state: present
+
+  - # 普段のサイズ
+    domain: com.apple.Dock
+    key: tilesize
+    type : float
+    value: 40
+    state: present
+  - # 拡大有効化
+    domain: com.apple.Dock
+    key: magnification
+    type : int
+    value: 1
+    state: present
+  - # 拡大のサイズ
+    domain: com.apple.Dock
+    key: largesize
+    type : float
+    value: 128
+    state: present

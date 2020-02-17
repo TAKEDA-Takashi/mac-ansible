@@ -1,0 +1,25 @@
+---
+- block:
+  - name: set osx defaults
+    osx_defaults:
+      domain: "{{ item.domain }}"
+      key: "{{ item.key }}"
+      type: "{{ item.type }}"
+      value: "{{ item.value }}"
+      state: "{{ item.state }}"
+    loop: "{{ settings }}"
+
+  - name: dock clear
+    osx_defaults:
+      domain: com.apple.Dock
+      key: persistent-apps
+      type : array
+      value:
+        -
+      state: present
+    when: dock_clear | default("false") == "true"
+
+  - include_tasks: command_tasks.yml
+
+  tags:
+    - macos

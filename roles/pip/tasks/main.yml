@@ -1,0 +1,25 @@
+---
+- block:
+  - name: upgrade pip
+    pip:
+      executable: pip3
+      name: pip
+      extra_args: --user
+      state: latest
+
+  - name: install pip packages
+    pip:
+      executable: pip3
+      name: "{{ item.name }}"
+      extra_args: --user
+      state: "{{ item.state }}"
+    loop: "{{ packages }}"
+
+  - name: copy setenv files to bashrc.d
+    copy:
+      src: "{{ item }}"
+      dest: ~/.bashrc.d/
+    with_fileglob: bashrc/*
+
+  tags:
+    - pip

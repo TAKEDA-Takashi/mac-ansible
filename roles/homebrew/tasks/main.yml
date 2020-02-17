@@ -1,0 +1,16 @@
+---
+- block:
+  - name: install homebrew packages
+    homebrew:
+      name: "{{ item.name }}"
+      state: "{{ item.state }}"
+    loop: "{{ packages }}"
+
+  - name: copy setenv files to bashrc.d
+    copy:
+      src: "{{ item }}"
+      dest: ~/.bashrc.d/
+    with_fileglob: bashrc/*
+
+  tags:
+    - homebrew

@@ -1,0 +1,23 @@
+---
+- block:
+  - name: check rustup
+    command: "which cargo"
+    register: result
+    check_mode: no
+    changed_when: no
+    failed_when: no
+
+  - name: install rustup # shellを使わない書き方がうまくいかなかった
+    shell: "curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y"
+    args:
+      warn: no
+    when: result.rc == 1
+
+  - name: copy setenv files to bashrc.d
+    copy:
+      src: "{{ item }}"
+      dest: ~/.bashrc.d/
+    with_fileglob: bashrc/*
+
+  tags:
+    - rust

@@ -1,0 +1,16 @@
+---
+- block:
+  - name: copy bash config files
+    copy:
+      src: "{{ item }}"
+      dest: "~/.{{ item | basename }}"
+    with_fileglob: config/*
+
+  - name: create bashrc.d
+    file:
+      path: ~/.bashrc.d
+      state: directory
+      mode: '0700'
+
+  tags:
+    - bash

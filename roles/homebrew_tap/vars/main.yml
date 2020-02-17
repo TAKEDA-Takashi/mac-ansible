@@ -1,0 +1,4 @@
+---
+taps:
+  - { name: classmethod/repos }
+  - { name: homebrew/cask-versions }

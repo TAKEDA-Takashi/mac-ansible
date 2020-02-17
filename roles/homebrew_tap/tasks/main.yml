@@ -1,0 +1,10 @@
+---
+- block:
+  - name: add homebrew tap repository
+    homebrew_tap:
+      name: "{{ item.name }}"
+      state: present
+    loop: "{{ taps }}"
+
+  tags:
+    - homebrew_tap

@@ -1,0 +1,43 @@
+---
+- block:
+  - name: copy setenv files to bashrc.d
+    copy:
+      src: "{{ item }}"
+      dest: ~/.bashrc.d/
+    with_fileglob: bashrc/*
+
+  - name: create config directory
+    file:
+      path: "~/.{{ item }}"
+      state: directory
+      mode: '0700'
+    loop: "{{ targets }}"
+
+  - name: lookup config files
+    set_fact:
+      configs: "{{ lookup('fileglob', item + '/*').split(',') }}"
+    register: result
+    loop: "{{ targets }}"
+
+  - name: copy config files
+    copy:
+      src: "{{ item.1 }}"
+      dest: "~/.{{ item.0.item }}"
+    with_subelements:
+      - "{{ result.results }}"
+      - ansible_facts.configs
+
+  - name: lookup ssh key files
+    shell: "ls ~/.ssh/{id_rsa,*.pem}"
+    check_mode: no
+    changed_when: no
+    register: path_files
+
+  - name: change key files permission
+    file:
+      path: "{{ item }}"
+      mode: '0600'
+    loop: "{{ path_files.stdout_lines }}"
+
+  tags:
+    - _private

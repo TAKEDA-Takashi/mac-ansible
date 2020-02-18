@@ -1,7 +1,7 @@
 ---
 - block:
   - name: check awscli
-    command: "which aws"
+    command: which aws
     register: result
     check_mode: no
     changed_when: no

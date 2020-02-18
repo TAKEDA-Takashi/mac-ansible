@@ -1,7 +1,7 @@
 ---
 - block:
   - name: check rustup
-    command: "which cargo"
+    command: which cargo
     register: result
     check_mode: no
     changed_when: no

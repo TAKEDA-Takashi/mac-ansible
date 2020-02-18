@@ -3,21 +3,21 @@
 - block:
   # Ctrl + spaceのショートカットキーを無効化
   - name: check hotkey 60
-    shell: defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep ' 60 =' -1 | tail -1 | sed -e 's/ //g'
+    shell: "defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep ' 60 =' -1 | tail -1 | sed -e 's/ //g'"
     register: check_hotkey_60
     check_mode: no
     changed_when: no
 
   - name: disable hotkey 60
-    command: defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 "<dict><key>enabled</key><false/></dict>"
-    when: check_hotkey_60.stdout != "enabled=0;"
+    command: defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 60 '<dict><key>enabled</key><false/></dict>'
+    when: check_hotkey_60.stdout != 'enabled=0;'
 
   - name: check hotkey 61
-    shell: defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep ' 61 =' -1 | tail -1 | sed -e 's/ //g'
+    shell: "defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep ' 61 =' -1 | tail -1 | sed -e 's/ //g'"
     register: check_hotkey_61
     check_mode: no
     changed_when: no
 
   - name: disable hotkey 61
-    command: defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 "<dict><key>enabled</key><false/></dict>"
-    when: check_hotkey_61.stdout != "enabled=0;"
+    command: defaults write com.apple.symbolichotkeys AppleSymbolicHotKeys -dict-add 61 '<dict><key>enabled</key><false/></dict>'
+    when: check_hotkey_61.stdout != 'enabled=0;'

@@ -17,7 +17,7 @@
       value:
         -
       state: present
-    when: dock_clear | default("false") == "true"
+    when: "dock_clear | default('false') == 'true'"
 
   - include_tasks: command_tasks.yml
 

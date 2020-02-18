@@ -2,18 +2,27 @@
 - block:
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
+  - name: fetch directory list
+    local_action: "shell ls | grep -v bashrc"
+    args:
+      chdir: "{{ role_path }}/files"
+    register: dirs
+    check_mode: no
+    changed_when: no
+    failed_when: no
+
   - name: create config directory
     file:
       path: "~/.{{ item }}"
       state: directory
       mode: "0700"
-    loop: "{{ targets }}"
+    loop: "{{ dirs.stdout_lines }}"
 
   - name: copy config files
     copy:
       src: "{{ item }}/"
       dest: "~/.{{ item }}"
-    loop: "{{ targets }}"
+    loop: "{{ dirs.stdout_lines }}"
 
   - name: lookup ssh key files
     shell: "ls ~/.ssh/{id_rsa,*.pem}"

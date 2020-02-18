@@ -20,4 +20,25 @@ ansible-playbook site.yml -i hosts
 
 ## \_private について
 
-アクセスキーなどリポジトリには含められない機密情報を含んだファイルを配置するディレクトリです。
+アクセスキーなどリポジトリには含められない機密情報を含んだファイルを配置するディレクトリです。例として次のように配置します。
+
+```bash
+$ tree roles/_private/files/
+roles/_private/files/
+├── aurl
+│   └── profiles
+├── aws
+│   ├── config
+│   └── credentials
+├── bashrc
+│   ├── 70-basklog.sh
+├── config
+│   ├── hub
+│   └── karabiner
+│       └── karabiner.json
+└── ssh
+    ├── aws-takeda-takashi.pem
+    ├── config
+    ├── id_rsa
+    └── id_rsa.pub
+```

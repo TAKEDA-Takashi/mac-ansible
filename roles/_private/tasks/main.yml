@@ -9,19 +9,11 @@
       mode: "0700"
     loop: "{{ targets }}"
 
-  - name: lookup config files
-    set_fact:
-      configs: "{{ lookup('fileglob', item + '/*').split(',') }}"
-    register: result
-    loop: "{{ targets }}"
-
   - name: copy config files
     copy:
-      src: "{{ item.1 }}"
-      dest: "~/.{{ item.0.item }}"
-    with_subelements:
-      - "{{ result.results }}"
-      - ansible_facts.configs
+      src: "{{ item }}/"
+      dest: "~/.{{ item }}"
+    loop: "{{ targets }}"
 
   - name: lookup ssh key files
     shell: "ls ~/.ssh/{id_rsa,*.pem}"

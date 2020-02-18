@@ -6,7 +6,7 @@
     check_mode: no
     changed_when: no
 
-  - name: install AppStore applications
+  - name: install App Store applications
     command: "mas install {{ item.id }}"
     when: "installed_list.stdout_lines | select('search', item.id | string) | list | length == 0"
     loop: "{{ apps }}"

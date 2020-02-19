@@ -5,6 +5,9 @@ packages:
   - { name: bash-completion@2, state: present }
   - { name: jq, state: present }
   - { name: git, state: present }
+  - { name: git-flow-avh, state: present }
+  - { name: ghq, state: present }
+  - { name: peco, state: present }
   - { name: hub, state: present }
   - { name: nvm, state: present }
   - { name: nkf, state: present }

@@ -2,5 +2,6 @@
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
-    }
+    },
+    "terminal.external.osxExec": "iTerm.app"
 }

@@ -1,5 +1,12 @@
 ---
 settings:
+  - # 拡張子を表示
+    domain: Apple Global Domain
+    key: AppleShowAllExtensions
+    type: int
+    value: 1
+    state: present
+
   # トラックパッド
   - # タップでクリック
     domain: com.apple.AppleMultitouchTrackpad

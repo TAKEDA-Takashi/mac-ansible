@@ -21,6 +21,11 @@
     when: item.rc == 1
     loop: "{{ result.results }}"
 
+  - name: copy vscode settings.json
+    copy:
+      src: vscode/settings.json
+      dest: ~/Library/Application Support/Code/User/
+
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:

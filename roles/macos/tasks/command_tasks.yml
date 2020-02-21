@@ -3,7 +3,7 @@
 - block:
   # Option + tabで同一アプリ内のウインドウを切り替える
   - name: fetch hotkey 27
-    shell: defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep '27 =' -A 10 | sed -E -e 's/(\S*) =/"\1":/' | sed -e 's/standard;/"standard"/' | tr '()' '[]' | sed -e 's/};/}/' | sed -e 's/;/,/' | awk 'NR==1{sub(/^/, "{")} NR==11{sub(/$/, "}")} {print}'
+    shell: defaults read com.apple.symbolichotkeys AppleSymbolicHotKeys | grep '27 =' -A 10 | gsed -E -e 's/(\S*) =/"\1":/' | sed -e 's/standard;/"standard"/' | tr '()' '[]' | sed -e 's/};/}/' | sed -e 's/;/,/' | awk 'NR==1{sub(/^/, "{")} NR==11{sub(/$/, "}")} {print}'
     register: check_hotkey_27
     check_mode: no
     changed_when: no

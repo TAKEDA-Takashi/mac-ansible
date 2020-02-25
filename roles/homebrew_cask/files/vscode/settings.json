@@ -3,5 +3,6 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "terminal.external.osxExec": "iTerm.app"
+    "terminal.external.osxExec": "iTerm.app",
+    "files.insertFinalNewline": true
 }

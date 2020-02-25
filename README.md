@@ -31,7 +31,7 @@ roles/_private/files/
 │   ├── config
 │   └── credentials
 ├── bashrc
-│   ├── 70-basklog.sh
+│   └── 70-basklog.sh
 ├── config
 │   ├── hub
 │   └── karabiner

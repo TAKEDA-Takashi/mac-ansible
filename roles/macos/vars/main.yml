@@ -50,6 +50,12 @@ settings:
     type: int
     value: 1
     state: present
+  - # 軌跡の速さ
+    domain: Apple Global Domain
+    key: com.apple.trackpad.scaling
+    type: float
+    value: 3
+    state: present
 
   # キーボード／入力ソース
   - # 円キー

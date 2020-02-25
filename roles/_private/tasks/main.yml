@@ -36,5 +36,12 @@
       mode: "0600"
     loop: "{{ path_files.stdout_lines }}"
 
+  - name: edit hosts
+    include_tasks: hosts.yml
+    with_first_found:
+      - files:
+        - hosts.yml
+        skip: true
+
   tags:
     - _private

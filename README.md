@@ -42,3 +42,11 @@ roles/_private/files/
     ├── id_rsa
     └── id_rsa.pub
 ```
+
+### hostsファイルの変更
+
+`/etc/hosts`を変更したい場合は、`roles/_private/tasks/hosts.yml`を作成してください。`hosts.yml.template`をベースにするのが簡単です。なおプレイブック実行の際に`-K`オプションが必要です。
+
+```bash
+$ cp roles/_private/tasks/hosts.yml{.template,}
+```

@@ -1,0 +1,9 @@
+---
+- block:
+  - name: edit /etc/hosts
+    become: true
+    blockinfile:
+      path: /etc/hosts
+      backup: yes
+      block: |
+        IP_ADDR HOSTNAME

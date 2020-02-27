@@ -6,6 +6,24 @@
       state: "{{ item.state }}"
     loop: "{{ packages }}"
 
+  - name: check login shell
+    shell: dscl localhost -read Local/Default/Users/$USER UserShell | cut -d' ' -f2
+    register: login_shell
+    check_mode: no
+    changed_when: no
+
+  - block:
+    - name: register shells
+      become: yes
+      lineinfile:
+        path: /etc/shells
+        line: /usr/local/bin/bash
+
+    - name: change login shell
+      command: chsh -s /usr/local/bin/bash
+
+    when: login_shell.stdout != '/usr/local/bin/bash'
+
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:

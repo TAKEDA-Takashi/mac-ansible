@@ -17,3 +17,4 @@ vscode_plugins:
   - amazonwebservices.aws-toolkit-vscode
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
+  - octref.vetur

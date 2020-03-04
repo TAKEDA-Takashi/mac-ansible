@@ -18,6 +18,7 @@ packages:
   - { name: gnu-sed, state: present }
   - { name: gawk, state: present }
   - { name: polipo, state: present }
+  - { name: pandoc, state: present }
   - { name: mecab, state: present }
   - { name: mecab-ipadic, state: present }
   - { name: swig, state: present }

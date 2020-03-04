@@ -9,7 +9,6 @@ packages:
   - { name: clipy, state: present }
   - { name: docker, state: present }
   - { name: iterm2, state: present }
-  - { name: nosql-workbench-for-amazon-dynamodb, state: present }
   - { name: corretto8, state: present } # homebrew/cask-versions
 
 vscode_plugins:

@@ -1,5 +1,7 @@
 #!/bin/bash
 
-PYTHON_VERSION=$(python3 -V | grep -E -o 3\.\\d+)
-export PATH="~/Library/Python/${PYTHON_VERSION}/bin/:$PATH"
-unset PYTHON_VERSION
+export PATH="$(python3 -m site --user-base)/bin:$PATH"
+
+export PIPENV_VENV_IN_PROJECT=1
+
+eval "$(pipenv --completion)"

@@ -1,7 +1,5 @@
 #!/bin/bash
 
-export PATH="/usr/local/bin:$PATH"
-
 #ignoredups+ignorespace
 export HISTCONTROL=erasedups
 export HISTIGNORE="history*:man*:fg*:bg*:ls*( -@(?|??)):pwd:jobs:export:env:exit"

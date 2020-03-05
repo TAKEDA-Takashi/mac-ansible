@@ -17,3 +17,4 @@ vscode_plugins:
   - dbaeumer.vscode-eslint
   - esbenp.prettier-vscode
   - octref.vetur
+  - mechatroner.rainbow-csv

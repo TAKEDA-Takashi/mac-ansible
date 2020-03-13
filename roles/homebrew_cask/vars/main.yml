@@ -18,3 +18,5 @@ vscode_plugins:
   - esbenp.prettier-vscode
   - octref.vetur
   - mechatroner.rainbow-csv
+  - matklad.rust-analyzer
+  - bungcip.better-toml

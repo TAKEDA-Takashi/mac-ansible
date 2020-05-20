@@ -12,6 +12,7 @@
     - pip
     - awscli
     - rust
+    - deno
     - mas
     - macos
     - _private

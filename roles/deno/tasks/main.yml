@@ -1,0 +1,19 @@
+---
+- block:
+  - name: check deno
+    command: which deno
+    register: result
+    check_mode: no
+    changed_when: no
+    failed_when: no
+
+  - name: install deno
+    shell: "curl -fsSL https://deno.land/x/install/install.sh | sh"
+    args:
+      warn: no
+    when: result.rc == 1
+
+  - import_tasks: ../common/tasks/copy_bashrc.yml
+
+  tags:
+    - deno

@@ -4,5 +4,6 @@
         "source.fixAll.eslint": true
     },
     "terminal.external.osxExec": "iTerm.app",
-    "files.insertFinalNewline": true
+    "files.insertFinalNewline": true,
+    "editor.fontFamily": "'Myrica M',Menlo, Monaco, 'Courier New', monospace"
 }

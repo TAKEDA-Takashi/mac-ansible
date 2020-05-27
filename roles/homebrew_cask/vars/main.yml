@@ -22,3 +22,4 @@ vscode_plugins:
   - mechatroner.rainbow-csv
   - matklad.rust-analyzer
   - bungcip.better-toml
+  - lextudio.restructuredtext

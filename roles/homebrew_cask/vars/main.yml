@@ -9,6 +9,8 @@ packages:
   - { name: clipy, state: present }
   - { name: docker, state: present }
   - { name: iterm2, state: present }
+  - { name: font-myrica, state: present } # homebrew/cask-fonts
+  - { name: font-myricam, state: present } # homebrew/cask-fonts
   - { name: corretto8, state: present } # homebrew/cask-versions
 
 vscode_plugins:

@@ -21,6 +21,28 @@
  
     when: result.rc == 1
 
+  - name: check session manager plugin
+    command: session-manager-plugin
+    register: result
+    check_mode: no
+    changed_when: no
+    failed_when: no
+
+  - block:
+    - name: download session manager plugin
+      unarchive:
+        src: https://s3.amazonaws.com/session-manager-downloads/plugin/latest/mac/sessionmanager-bundle.zip
+        dest: /tmp
+        remote_src: yes
+        validate_certs: no
+      register: smp
+
+    - name: install session manager plugin
+      become: yes
+      command: "{{ smp.dest }}/sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin"
+
+    when: result.rc != 0
+
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:

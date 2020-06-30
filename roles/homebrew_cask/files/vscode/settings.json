@@ -6,5 +6,7 @@
     "terminal.external.osxExec": "iTerm.app",
     "files.insertFinalNewline": true,
     "editor.fontFamily": "'Myrica M',Menlo, Monaco, 'Courier New', monospace",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 0,
+    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？　てにをはがのともへでや"
 }

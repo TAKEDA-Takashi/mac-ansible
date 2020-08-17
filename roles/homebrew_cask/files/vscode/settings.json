@@ -1,12 +1,16 @@
 {
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "terminal.external.osxExec": "iTerm.app",
-    "files.insertFinalNewline": true,
-    "editor.fontFamily": "'Myrica M',Menlo, Monaco, 'Courier New', monospace",
-    "editor.wordWrap": "on",
-    "window.zoomLevel": 0,
-    "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？　てにをはがのともへでや"
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "terminal.external.osxExec": "iTerm.app",
+  "files.insertFinalNewline": true,
+  "editor.fontFamily": "'Myrica M',Menlo, Monaco, 'Courier New', monospace",
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 0,
+  "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？　てにをはがのともへでや",
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true,
+  "python.linting.enabled": false
 }

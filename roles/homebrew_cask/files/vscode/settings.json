@@ -11,6 +11,10 @@
   "window.zoomLevel": 0,
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？　てにをはがのともへでや",
   "python.formatting.provider": "black",
-  "editor.formatOnSave": true,
-  "python.linting.enabled": false
+  "python.linting.enabled": false,
+  "[python]": {
+    "editor.formatOnSave": true
+  },
+  "aws.onDefaultRegionMissing": "add",
+  "aws.profile": "profile:default"
 }

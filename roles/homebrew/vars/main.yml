@@ -16,6 +16,8 @@ packages:
   - { name: rename, state: present }
   - { name: htop, state: present }
   - { name: gnu-sed, state: present }
+  - { name: gnu-getopt, state: present }
+  - { name: coreutils, state: present }
   - { name: gawk, state: present }
   - { name: polipo, state: present }
   - { name: pandoc, state: present }

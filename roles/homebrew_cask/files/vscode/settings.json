@@ -15,6 +15,9 @@
   "[python]": {
     "editor.formatOnSave": true
   },
+  "[rust]": {
+    "editor.formatOnSave": true
+  },
   "aws.onDefaultRegionMissing": "add",
   "aws.profile": "profile:default"
 }

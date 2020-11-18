@@ -18,6 +18,5 @@
   "[rust]": {
     "editor.formatOnSave": true
   },
-  "aws.onDefaultRegionMissing": "add",
-  "aws.profile": "profile:default"
+  "aws.onDefaultRegionMissing": "add"
 }

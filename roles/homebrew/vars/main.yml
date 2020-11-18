@@ -3,7 +3,7 @@ packages:
   - { name: mas, state: present }
   - { name: bash, state: present }
   - { name: bash-completion@2, state: present }
-  - { name: python, state: present }
+  - { name: pyenv, state: present }
   - { name: jq, state: present }
   - { name: git, state: present }
   - { name: git-flow-avh, state: present }

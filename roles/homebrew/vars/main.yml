@@ -24,4 +24,5 @@ packages:
   - { name: mecab, state: present }
   - { name: mecab-ipadic, state: present }
   - { name: swig, state: present }
+  - { name: hugo, state: present }
   - { name: aurl, state: present } # classmethod/repos

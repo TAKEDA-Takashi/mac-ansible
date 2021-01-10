@@ -19,5 +19,8 @@
     "editor.formatOnSave": true
   },
   "aws.onDefaultRegionMissing": "add",
-  "editor.scrollBeyondLastLine": false
+  "editor.scrollBeyondLastLine": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

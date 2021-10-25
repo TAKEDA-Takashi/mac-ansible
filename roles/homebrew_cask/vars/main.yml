@@ -5,7 +5,6 @@ packages:
   - { name: visual-studio-code, state: present }
   - { name: karabiner-elements, state: present }
   - { name: jetbrains-toolbox, state: present }
-  - { name: tunnelblick, state: present }
   - { name: clipy, state: present }
   - { name: docker, state: present }
   - { name: iterm2, state: present }

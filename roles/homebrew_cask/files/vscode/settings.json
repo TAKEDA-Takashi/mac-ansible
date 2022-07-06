@@ -2,18 +2,20 @@
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
-    "source.organizeImports": true
   },
   "terminal.external.osxExec": "iTerm.app",
   "files.insertFinalNewline": true,
   "editor.fontFamily": "'Myrica M',Menlo, Monaco, 'Courier New', monospace",
   "editor.wordWrap": "on",
-  "window.zoomLevel": 0,
   "editor.wordSeparators": "`~!@#$%^&*()-=+[{]}\\|;:'\",.<>/?、。「」【】『』（）！？　てにをはがのともへでや",
   "python.formatting.provider": "black",
   "python.linting.enabled": false,
   "[python]": {
     "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[rust]": {
     "editor.formatOnSave": true
@@ -22,5 +24,18 @@
   "editor.scrollBeyondLastLine": false,
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  },
+  "rust-analyzer.procMacro.enable": true,
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter-notebook"
+  },
+  "python.languageServer": "Pylance",
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "aws.profile": "profile:default",
+  "json.schemas": [],
+  "extensions.autoUpdate": false,
+  "rust-analyzer.cargo.buildScripts.enable": true,
 }

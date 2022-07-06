@@ -1,5 +1,6 @@
 ---
 packages:
   - { name: pipenv, state: present }
+  - { name: poetry, state: present }
   - { name: black, state: present }
   - { name: isort, state: present }

@@ -9,7 +9,7 @@ packages:
   - { name: git-flow-avh, state: present }
   - { name: ghq, state: present }
   - { name: peco, state: present }
-  - { name: hub, state: present }
+  - { name: gh, state: present }
   - { name: nvm, state: present }
   - { name: nkf, state: present }
   - { name: tree, state: present }

@@ -12,7 +12,6 @@ declare -A files=(
   ["roles/_private/files/aws/credentials"]="${HOME}/.aws/credentials"
   ["roles/_private/files/config/karabiner/karabiner.json"]="${HOME}/.config/karabiner/karabiner.json"
   ["roles/_private/files/config/com.googlecode.iterm2.plist"]="${HOME}/.config/com.googlecode.iterm2.plist"
-  ["roles/_private/files/config/hub"]="${HOME}/.config/hub"
   ["roles/_private/files/ssh/config"]="${HOME}/.ssh/config"
 )
 

@@ -12,17 +12,23 @@
     check_mode: no
     changed_when: no
 
+  - name: brew prefix
+    shell: brew --prefix
+    register: brew_prefix
+    check_mode: no
+    changed_when: no
+
   - block:
     - name: register shells
       become: yes
       lineinfile:
         path: /etc/shells
-        line: /usr/local/bin/bash
+        line: "{{ brew_prefix.stdout }}/bin/bash"
 
     - name: change login shell
-      command: chsh -s /usr/local/bin/bash
+      command: "chsh -s {{ brew_prefix.stdout }}/bin/bash"
 
-    when: login_shell.stdout != '/usr/local/bin/bash'
+    when: "(login_shell.stdout) != (brew_prefix.stdout + '/bin/bash')"
 
   - import_tasks: ../common/tasks/copy_bashrc.yml
 

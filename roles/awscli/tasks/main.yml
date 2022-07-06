@@ -39,7 +39,7 @@
 
     - name: install session manager plugin
       become: yes
-      command: "{{ smp.dest }}/sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin"
+      command: "/usr/bin/python3 {{ smp.dest }}/sessionmanager-bundle/install -i /usr/local/sessionmanagerplugin -b /usr/local/bin/session-manager-plugin"
 
     when: result.rc != 0
 

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export PATH="/usr/local/opt/gnu-getopt/bin:$PATH"
+export PATH="$(brew --prefix)/opt/gnu-getopt/bin:$PATH"

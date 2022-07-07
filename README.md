@@ -34,9 +34,8 @@ roles/_private/files/
 │   ├── config
 │   └── credentials
 ├── bashrc
-│   └── 70-basklog.sh
+│   └── 70-backlog.sh
 ├── config
-│   ├── hub
 │   └── karabiner
 │       └── karabiner.json
 └── ssh

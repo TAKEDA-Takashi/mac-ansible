@@ -98,6 +98,12 @@ settings:
     type: string
     value: "M\\u6708d\\u65e5(EEE)  H:mm:ss"
     state: present
+  -
+    domain: com.apple.menuextra.clock
+    key: ShowDate
+    type: int
+    value: 1
+    state: present
 
   # ホットコーナー
   - # 左下スクリーンセーバー開始

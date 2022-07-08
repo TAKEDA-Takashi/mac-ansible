@@ -2,6 +2,15 @@
 
 ## 実行
 
+1. Homebrewインストール
+2. Ansibleインストール
+3. ansible-playbook site.yml -i hosts -t homebrew_tap -t homebrew_cask
+4. 1Password使えるようにする
+5. App Storeログイン
+6. _privateのfilesを引っ張ってくる
+7. `ansible-playbook site.yml -i hosts -e 'dock_clear=true' -K`
+8. 再起動
+
 - `dock_clear=true`
     - Dockの不要なアプリケーションを削除する
     - 通常は最初の1回のみでOK
@@ -20,6 +29,13 @@ ansible-playbook site.yml -i hosts -e 'dock_clear=true' -K
 ```shell
 ansible-playbook site.yml -i hosts
 ```
+
+### 手動修正
+
+一部自動化が困難で手動で変更する部分がある。できるなら自動化したい。
+
+- キーボード > 入力ソース > 日本語 > 入力モード > 英字 -> ON
+- キーボード > 入力ソース > ABC -> 削除
 
 ## \_private について
 

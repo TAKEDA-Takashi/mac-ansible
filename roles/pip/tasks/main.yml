@@ -15,6 +15,16 @@
       state: "{{ item.state }}"
     loop: "{{ packages }}"
 
+  - name: check poetry virtualenvs.in-project
+    shell: poetry config virtualenvs.in-project
+    register: check_poetry_virtualenvs
+    check_mode: no
+    changed_when: no
+
+  - name: set poetry virtualenvs.in-project true
+    command: poetry config virtualenvs.in-project true
+    when: check_poetry_virtualenvs.stdout != 'true'
+
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:

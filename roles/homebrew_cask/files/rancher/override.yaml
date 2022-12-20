@@ -1,0 +1,4 @@
+mounts:
+- location: "/private/var/folders"
+  writable: true
+  mountType: sshfs

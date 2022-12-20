@@ -26,6 +26,11 @@
       src: vscode/settings.json
       dest: ~/Library/Application Support/Code/User/
 
+  - name: copy Rancher Desktop override.yaml
+    copy:
+      src: rancher/override.yaml
+      dest: ~/Library/Application Support/rancher-desktop/lima/_config/
+
   - import_tasks: ../common/tasks/copy_bashrc.yml
 
   tags:

@@ -1,27 +1,28 @@
 ---
 packages:
-  - { name: mas, state: present }
-  - { name: bash, state: present }
+  - { name: awsume, state: present }
   - { name: bash-completion@2, state: present }
-  - { name: pyenv, state: present }
-  - { name: jq, state: present }
-  - { name: git, state: present }
-  - { name: git-flow-avh, state: present }
-  - { name: ghq, state: present }
-  - { name: peco, state: present }
-  - { name: gh, state: present }
-  - { name: nvm, state: present }
-  - { name: nkf, state: present }
-  - { name: tree, state: present }
-  - { name: rename, state: present }
-  - { name: htop, state: present }
-  - { name: gnu-sed, state: present }
-  - { name: gnu-getopt, state: present }
+  - { name: bash, state: present }
   - { name: coreutils, state: present }
   - { name: gawk, state: present }
-  - { name: pandoc, state: present }
-  - { name: mecab, state: present }
-  - { name: mecab-ipadic, state: present }
-  - { name: swig, state: present }
+  - { name: gh, state: present }
+  - { name: ghq, state: present }
+  - { name: git-flow-avh, state: present }
+  - { name: git, state: present }
+  - { name: gnu-getopt, state: present }
+  - { name: gnu-sed, state: present }
+  - { name: htop, state: present }
   - { name: hugo, state: present }
+  - { name: jq, state: present }
+  - { name: mas, state: present }
+  - { name: mecab-ipadic, state: present }
+  - { name: mecab, state: present }
+  - { name: nkf, state: present }
+  - { name: nvm, state: present }
+  - { name: pandoc, state: present }
+  - { name: peco, state: present }
+  - { name: pyenv, state: present }
+  - { name: rename, state: present }
+  - { name: swig, state: present }
+  - { name: tree, state: present }
   - { name: aurl, state: present } # classmethod/repos

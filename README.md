@@ -2,14 +2,20 @@
 
 ## 実行
 
-1. Homebrewインストール
-2. Ansibleインストール
-3. ansible-playbook site.yml -i hosts -t homebrew_tap -t homebrew_cask
+1. `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2. `python3 -m pip install --user ansible`
+3. `ansible-playbook site.yml -i hosts -t homebrew_tap -t homebrew_cask`
 4. 1Password使えるようにする
 5. App Storeログイン
 6. _privateのfilesを引っ張ってくる
 7. `ansible-playbook site.yml -i hosts -e 'dock_clear=true' -K`
 8. 再起動
+
+M1 Macだとbrewにパスが通っていないため最初に通しておく。
+
+```
+$ export PATH="/opt/homebrew/bin:$PATH"
+```
 
 - `dock_clear=true`
     - Dockの不要なアプリケーションを削除する
@@ -36,6 +42,13 @@ ansible-playbook site.yml -i hosts
 
 - キーボード > 入力ソース > 日本語 > 入力モード > 英字 -> ON
 - キーボード > 入力ソース > ABC -> 削除
+- iTerm2のConfigロード設定
+- Clipyのスニペットインポート
+- Clipy: 環境設定 > 一般 > 記憶する履歴の数 -> 100
+- Clipy: 環境設定 > メニュー
+    - インライン表示する項目の数 -> 10
+    - フォルダに内包する項目の数 -> 20
+    - メニューに表示する文字数 -> 30
 
 ## \_private について
 

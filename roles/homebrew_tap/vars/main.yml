@@ -1,5 +1,5 @@
 ---
 taps:
   - { name: classmethod/repos }
-  - { name: homebrew/cask-versions }
   - { name: homebrew/cask-fonts }
+  - { name: homebrew/cask-versions }

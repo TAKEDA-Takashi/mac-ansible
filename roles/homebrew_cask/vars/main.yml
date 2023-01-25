@@ -7,7 +7,7 @@ packages:
   - { name: karabiner-elements, state: present }
   - { name: rancher, state: present }
   - { name: visual-studio-code, state: present }
-  # - { name: 1password, state: present }
+  - { name: 1password, state: present }
   - { name: font-myrica, state: present } # homebrew/cask-fonts
   - { name: font-myricam, state: present } # homebrew/cask-fonts
 

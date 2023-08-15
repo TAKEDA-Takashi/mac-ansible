@@ -1,4 +1,6 @@
 mounts:
 - location: "/private/var/folders"
   writable: true
-  mountType: sshfs
+  9p:
+    cache: "mmap"
+    securityModel: "mapped-xattr"
